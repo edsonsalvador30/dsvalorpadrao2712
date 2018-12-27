@@ -1,0 +1,13 @@
+window.dataSourceMap = window.dataSourceMap || [];
+window.dataSourceMap["app.query180150"] = { customId: "query180150", serviceUrl: "api/cronapi/odata/v2/query180150/", serviceUrlODATA: "/api/cronapi/odata/v2/app/query180150" };
+window.dataSourceMap["app.device"] = { customId: "device", serviceUrl: "api/cronapi/query/1jy88nt41afza/", serviceUrlODATA: "/api/cronapi/odata/v2/app/device" };
+window.dataSourceMap["app.User"] = { customId: "app.entity.User", serviceUrl: "api/cronapi/crud/app.entity.User", serviceUrlODATA: "/api/cronapi/odata/v2/app/User" };
+window.dataSourceMap["app.auth"] = { customId: "auth", serviceUrl: "api/cronapi/query/auth/", serviceUrlODATA: "/api/cronapi/odata/v2/app/auth" };
+window.dataSourceMap["app.roles"] = { customId: "roles", serviceUrl: "api/cronapi/query/roles/", serviceUrlODATA: "/api/cronapi/odata/v2/app/roles" };
+window.dataSourceMap["app.Device"] = { customId: "app.entity.Device", serviceUrl: "api/cronapi/crud/app.entity.Device", serviceUrlODATA: "/api/cronapi/odata/v2/app/Device" };
+window.dataSourceMap["app.query715531"] = { customId: "query715531", serviceUrl: "api/cronapi/odata/v2/query715531/", serviceUrlODATA: "/api/cronapi/odata/v2/app/query715531" };
+window.dataSourceMap["app.Tipos"] = { customId: "app.entity.Tipos", serviceUrl: "api/cronapi/crud/app.entity.Tipos", serviceUrlODATA: "/api/cronapi/odata/v2/app/Tipos" };
+window.dataSourceMap["app.Role"] = { customId: "app.entity.Role", serviceUrl: "api/cronapi/crud/app.entity.Role", serviceUrlODATA: "/api/cronapi/odata/v2/app/Role" };
+window.dataSourceMap["app.query57383"] = { customId: "query57383", serviceUrl: "api/cronapi/odata/v2/query57383/", serviceUrlODATA: "/api/cronapi/odata/v2/app/query57383" };
+window.dataSourceMap["app.query96488"] = { customId: "query96488", serviceUrl: "api/cronapi/odata/v2/query96488/", serviceUrlODATA: "/api/cronapi/odata/v2/app/query96488" };
+window.dataSourceMap["app.Cadastro"] = { customId: "app.entity.Cadastro", serviceUrl: "api/cronapi/crud/app.entity.Cadastro", serviceUrlODATA: "/api/cronapi/odata/v2/app/Cadastro" };

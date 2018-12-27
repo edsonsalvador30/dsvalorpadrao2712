@@ -1,0 +1,790 @@
+{
+  "auth": {
+    "customId": "auth",
+    "queryName": "Authenticate",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "User",
+    "entityFullName": "app.entity.User",
+    "query": "select o from User o where o.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "POST": false,
+      "PUT": false,
+      "DELETE": false
+    },
+    "events": {},
+    "defaultValues": {},
+    "security": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/auth/"
+  },
+  "roles": {
+    "customId": "roles",
+    "queryName": "Get Roles",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Role",
+    "entityFullName": "app.entity.Role",
+    "query": "select o.id from Role o where o.user.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "POST": false,
+      "PUT": false,
+      "DELETE": false,
+      "FILTER": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/roles/"
+  },
+  "device": {
+    "customId": "device",
+    "queryName": "Atualizar Dispositivos",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Device",
+    "entityFullName": "app.entity.Device",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "Device",
+          "namespace": "app.entity.Device",
+          "alias": "d"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "d",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "d.id",
+            "field": "d.id",
+            "type": "string",
+            "input": "text",
+            "operator": "equal",
+            "value": ":id",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": true,
+      "paginatorAutomatic": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "id",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/1jy88nt41afza/"
+  },
+  "query96488": {
+    "customId": "query96488",
+    "queryName": "Consulta Customizada Cadastro",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Cadastro",
+    "entityFullName": "app.entity.Cadastro",
+    "query": {
+      "isValid": true,
+      "rulesEntity": [
+        {
+          "entity": "Cadastro",
+          "alias": "c",
+          "namespace": "app.entity.Cadastro"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "c"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "not": false,
+        "valid": true,
+        "rules": []
+      }
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true
+    },
+    "events": {},
+    "defaultValues": {
+      "id": "null",
+      "nome": {
+        "type": "server",
+        "blocklyMethod": "Executar",
+        "blocklyClass": "blockly.CampoNome",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.CampoNome",
+          "sourcePath": "src/main/java/blockly/CampoNome.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "Executar",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      },
+      "idade": {
+        "type": "server",
+        "blocklyMethod": "Idade",
+        "blocklyClass": "blockly.CampoIdadePadrao",
+        "blocklyLanguage": "java",
+        "blocklyParams": [
+          {
+            "name": "Entidade\u003capp.entity.Cadastro\u003e",
+            "value": "null",
+            "type": "CUSTOM"
+          }
+        ],
+        "blocklyJson": {
+          "namespace": "blockly.CampoIdadePadrao",
+          "sourcePath": "src/main/java/blockly/CampoIdadePadrao.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "Idade",
+              "hasReturn": "true",
+              "params": [
+                "Entidade\u003capp.entity.Cadastro\u003e"
+              ]
+            }
+          ]
+        }
+      },
+      "data": {
+        "type": "server",
+        "blocklyMethod": "Nascimento",
+        "blocklyClass": "blockly.Data",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.Data",
+          "sourcePath": "src/main/java/blockly/Data.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "Nascimento",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      }
+    },
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query96488/"
+  },
+  "query180150": {
+    "customId": "query180150",
+    "queryName": "Lista de Cadastra Customizado 2",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Cadastro",
+    "entityFullName": "app.entity.Cadastro",
+    "query": {
+      "isValid": true,
+      "rulesEntity": [
+        {
+          "entity": "Cadastro",
+          "alias": "c",
+          "namespace": "app.entity.Cadastro"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "c"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "not": false,
+        "valid": true,
+        "rules": []
+      }
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true
+    },
+    "events": {},
+    "defaultValues": {
+      "id": "null",
+      "nome": "\u0027Cadastro padr\\u00E3o\u0027",
+      "idade": "20",
+      "data": "cronapi.toDate(\u00272018-12-26T17:30:08.000Z\u0027)"
+    },
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query180150/"
+  },
+  "query715531": {
+    "customId": "query715531",
+    "queryName": "Consulta de Tipos",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Tipos",
+    "entityFullName": "app.entity.Tipos",
+    "query": {
+      "isValid": true,
+      "rulesEntity": [
+        {
+          "entity": "Tipos",
+          "alias": "t",
+          "namespace": "app.entity.Tipos"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "t"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "not": false,
+        "valid": true,
+        "rules": []
+      }
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true
+    },
+    "events": {},
+    "defaultValues": {
+      "id": "null",
+      "palavra": {
+        "type": "server",
+        "blocklyMethod": "Palavra",
+        "blocklyClass": "blockly.ValorPadraoTipos",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.ValorPadraoTipos",
+          "sourcePath": "src/main/java/blockly/ValorPadraoTipos.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "Palavra",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "numero",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Valor",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Data",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "DataHora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Hora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Ativo",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      },
+      "numero": {
+        "type": "server",
+        "blocklyMethod": "numero",
+        "blocklyClass": "blockly.ValorPadraoTipos",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.ValorPadraoTipos",
+          "sourcePath": "src/main/java/blockly/ValorPadraoTipos.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "Palavra",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "numero",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Valor",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Data",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "DataHora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Hora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Ativo",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      },
+      "valor": {
+        "type": "server",
+        "blocklyMethod": "Valor",
+        "blocklyClass": "blockly.ValorPadraoTipos",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.ValorPadraoTipos",
+          "sourcePath": "src/main/java/blockly/ValorPadraoTipos.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "Palavra",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "numero",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Valor",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Data",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "DataHora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Hora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Ativo",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      },
+      "data": {
+        "type": "server",
+        "blocklyMethod": "Data",
+        "blocklyClass": "blockly.ValorPadraoTipos",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.ValorPadraoTipos",
+          "sourcePath": "src/main/java/blockly/ValorPadraoTipos.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "Palavra",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "numero",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Valor",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Data",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "DataHora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Hora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Ativo",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      },
+      "hora": {
+        "type": "server",
+        "blocklyMethod": "Hora",
+        "blocklyClass": "blockly.ValorPadraoTipos",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.ValorPadraoTipos",
+          "sourcePath": "src/main/java/blockly/ValorPadraoTipos.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "Palavra",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "numero",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Valor",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Data",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "DataHora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Hora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Ativo",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      },
+      "dataHora": {
+        "type": "server",
+        "blocklyMethod": "DataHora",
+        "blocklyClass": "blockly.ValorPadraoTipos",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.ValorPadraoTipos",
+          "sourcePath": "src/main/java/blockly/ValorPadraoTipos.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "Palavra",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "numero",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Valor",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Data",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "DataHora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Hora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Ativo",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      },
+      "ativo": {
+        "type": "server",
+        "blocklyMethod": "Ativo",
+        "blocklyClass": "blockly.ValorPadraoTipos",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.ValorPadraoTipos",
+          "sourcePath": "src/main/java/blockly/ValorPadraoTipos.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "Palavra",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "numero",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Valor",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Data",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "DataHora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Hora",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Ativo",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      }
+    },
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query715531/"
+  },
+  "query57383": {
+    "customId": "query57383",
+    "queryName": "Blocos Tipos 2",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Tipos",
+    "entityFullName": "app.entity.Tipos",
+    "query": {
+      "isValid": true,
+      "rulesEntity": [
+        {
+          "entity": "Tipos",
+          "alias": "t",
+          "namespace": "app.entity.Tipos"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "t"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "not": false,
+        "valid": true,
+        "rules": []
+      }
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true
+    },
+    "events": {},
+    "defaultValues": {
+      "id": "null",
+      "palavra": {
+        "type": "server",
+        "blocklyMethod": "Palavra",
+        "blocklyClass": "blockly.TipoBloco2",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.TipoBloco2",
+          "sourcePath": "src/main/java/blockly/TipoBloco2.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "Palavra",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      },
+      "numero": "null",
+      "valor": "null",
+      "data": "null",
+      "hora": "null",
+      "dataHora": "null",
+      "ativo": {
+        "type": "server",
+        "blocklyMethod": "Ativo",
+        "blocklyClass": "blockly.TipoBloco2",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.TipoBloco2",
+          "sourcePath": "src/main/java/blockly/TipoBloco2.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "Palavra",
+              "hasReturn": "true",
+              "params": []
+            },
+            {
+              "name": "Ativo",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      }
+    },
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query57383/"
+  }
+}

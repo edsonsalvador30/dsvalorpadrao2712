@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="" resourceType="JAVA" ruleDescription="CampoIdadePadrao" ruleName="CampoIdadePadrao" ruleSynchronous="false" ruleTimeout="" ruleType="I">
+  <metadata scale="1" scrollx="487.3999999999995" scrolly="-56.500000000000114" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-352" y="143">
+    <mutation>
+      <arg name="Entidade&lt;app.entity.Cadastro&gt;"/>
+    </mutation>
+    <field name="NAME">Idade</field>
+    <comment h="80" pinned="false" w="160">CampoIdadePadrao</comment>
+    <value name="RETURN">
+      <block colour="#5b67a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="j@}T}ZLaja}iJ8JLujcS" origintype="math_number" output="true" tooltip="function () { [native code] }" type="math_number">
+        <field name="NUM">10</field>
+      </block>
+    </value>
+  </block>
+</blockly>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="" resourceType="JAVA" ruleDescription="TipoBloco2" ruleName="TipoBloco2" ruleSynchronous="false" ruleTimeout="" ruleType="I">
+  <metadata scale="1" scrollx="489.4" scrolly="-123" target="W#zV=YbP@.XJC*Ce,Oot"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-350" y="130">
+    <field name="NAME">Palavra</field>
+    <comment h="80" pinned="false" w="160">TipoBloco2</comment>
+    <value name="RETURN">
+      <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="O|E`-pi)`M/^l%R!$(E/" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field name="TEXT">Uma String qualquer</field>
+      </block>
+    </value>
+  </block>
+  <block colour="#fca03b" id="W#zV=YbP@.XJC*Ce,Oot" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-352" y="218">
+    <field name="NAME">Ativo</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <value name="RETURN">
+      <block colour="#5b80a5" dependencyby="W#zV=YbP@.XJC*Ce,Oot" id="_2]0}(Vv`|U/bI#0.ST~" origintype="logic_boolean" output="true" tooltip="Retorna verdadeiro ou falso." type="logic_boolean">
+        <field name="BOOL">TRUE</field>
+      </block>
+    </value>
+  </block>
+</blockly>
